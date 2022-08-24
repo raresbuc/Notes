@@ -17,6 +17,7 @@ export default function Sidebar(props) {
             </div>
         </div>
     ))
+    
 
     return (
         <section className="pane sidebar">

@@ -1,6 +1,6 @@
 import React from "react"
-import ReactMde from "react-mde"
-import Showdown from "showdown"
+import {Mde} from 'fc-mde'
+import * as Showdown from "showdown"
 
 export default function Editor({ currentNote, updateNote }) {
     const [selectedTab, setSelectedTab] = React.useState("write")
@@ -14,7 +14,7 @@ export default function Editor({ currentNote, updateNote }) {
 
     return (
         <section className="pane editor">
-            <ReactMde
+            <Mde
                 value={currentNote.body}
                 onChange={updateNote}
                 selectedTab={selectedTab}

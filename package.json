@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "fc-mde": "^1.0.0-alpha.45",
+    "nanoid": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-mde": "^11.5.0",

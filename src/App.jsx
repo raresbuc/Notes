@@ -2,7 +2,7 @@ import React from "react"
 import Sidebar from "./components/Sidebar"
 import Editor from "./components/Editor"
 import Split from "react-split"
-import {nanoid} from "nanoid"
+import { nanoid } from "nanoid"
 import "react-mde/lib/styles/css/react-mde-all.css"
 
 
@@ -22,6 +22,7 @@ export default function App() {
 
 
     function createNewNote() {
+        // const nanoid = require('nanoid')
         const newNote = {
             id: nanoid(),
             body: "# Type your markdown note's title here"
@@ -67,13 +68,14 @@ export default function App() {
             return note.id === currentNoteId
         }) || notes[0]
     }
-    
+
 
     return (
         <main>
         {
             notes.length > 0 
             ?
+
             <Split 
                 sizes={[30, 70]} 
                 direction="horizontal" 
@@ -86,6 +88,7 @@ export default function App() {
                     newNote={createNewNote}
                     deleteNote={deleteNote}
                 />
+                
                 {
                     currentNoteId && 
                     notes.length > 0 &&
@@ -95,7 +98,9 @@ export default function App() {
                     />
                 }
             </Split>
+
             :
+
             <div className="no-notes">
                 <h1>You have no notes</h1>
                 <button 
